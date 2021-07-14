@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+  nginx:
+    restart: always #docker 启动这个容器也跟着启动
+    image: test:1.0 #容器名字对应版本好
+    container_name: location #容器的名称
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      -  /Users/Tp:/var/www/html #项目路径 挂载到 容器路径
+      -  /Users/nginx.conf:/etc/nginx/nginx.conf #nginx配置 挂载到 容器路径
