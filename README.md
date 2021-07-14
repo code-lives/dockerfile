@@ -3,22 +3,30 @@
 ```
 debian 系统
 php 7.4
-nginx 最新
+nginx 看系统
 supervisor 防止 nginx和php挂掉的守护进程
 
 ```
 
-###  Dockerfile生成镜像
+###  生成镜像
 
 ```
-//生成 镜像名字 test 版本 1.0 的镜像
+
+//生成 镜像名字=test 版本=1.0 的镜像
 docker build -f Dockerfile -t test:1.0  .
 
 ```
 
-###  docker-compose.yml启动容器+运行项目
+###  启动容器和项目访问
 
 ```
+
+//启动容器 【记得在当前目录执行 因为你得有Dockerfile文件】
+docker-compose up -d
+
+//关闭容器
+docker-compose down
+
 本地项目挂载到容器
 127.0.0.1 直接访问
 
