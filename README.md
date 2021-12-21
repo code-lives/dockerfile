@@ -3,7 +3,7 @@
 ```
 debian 系统
 php 7.4
-nginx 看系统
+nginx 
 supervisor 防止 nginx和php挂掉的守护进程
 
 ```
